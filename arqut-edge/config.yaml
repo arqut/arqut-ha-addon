@@ -1,12 +1,12 @@
 name: Arqut Edge
-description: Arqut connector for Home Assistant
-version: 0.1.0
+description: Arqut Edge Application for Home Assistant
+version: 0.1.1
 slug: arqut-edge
 init: false
 url: https://github.com/tphan267/tunnel-ha-addon
 codenotary: tuan.phan267@gmail.com
 webui: http://[HOST]:[PORT:3030]
-image: ghcr.io/tphan267/arqut-edge-{arch}:0.1.0
+image: ghcr.io/tphan267/arqut-edge-{arch}:0.1.1
 arch:
   - aarch64
   - amd64

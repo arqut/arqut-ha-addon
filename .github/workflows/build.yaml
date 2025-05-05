@@ -3,12 +3,12 @@ name: Build and Push Add-on
 on:
   push:
     tags: 'v*' # Trigger on tags like v0.1.0
-    branches: [main] # Optional: Also build on main branch
+    # branches: [main] # Optional: Also build on main branch
     paths:
       - 'arqut-edge/**'
       - '.github/workflows/build.yaml'
-env:
-  VERSION: 0.1.0 # Init version
+# env:
+#   VERSION: 0.1.0 # Init version
 
 jobs:
   build:
@@ -50,7 +50,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v4
         with:
-          context: ./arqut-edge
+          context: ./addons/arqut-edge
           platforms: linux/${{ matrix.arch }}
           push: true
           tags: |
