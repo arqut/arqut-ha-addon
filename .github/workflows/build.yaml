@@ -50,7 +50,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v4
         with:
-          context: ./addons/arqut-edge
+          context: ./arqut-edge
           platforms: linux/${{ matrix.arch }}
           push: true
           tags: |
