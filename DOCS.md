@@ -51,7 +51,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
-[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?repository_url=https%3A%2F%2Fgithub.com%2Farqut%2Farqut-ha-addon
+[addon]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Ftphan267%2Ftunnel-ha-addon
 [issue]: https://github.com/arqut/arqut-ha-addon/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [releases]: https://github.com/hassio-addons/addon-unifi/releases
