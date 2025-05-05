@@ -28,4 +28,4 @@ Thank you for being involved! :heart_eyes:
 [armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
 [docs]: https://github.com/tphan267/tunnel-ha-addon/blob/main/DOCS.md
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[issue]: https://github.com/arqut/arqut-ha-addon/issues
+[issue]: https://github.com/tphan267/tunnel-ha-addon/issues

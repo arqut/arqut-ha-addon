@@ -28,7 +28,4 @@ Please [open an issue here][issue] GitHub.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Ftphan267%2Ftunnel-ha-addon
-[issue]: https://github.com/arqut/arqut-ha-addon/issues
-[keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[releases]: https://github.com/hassio-addons/addon-unifi/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[issue]: https://github.com/tphan267/tunnel-ha-addon/issues
