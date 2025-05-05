@@ -2,13 +2,13 @@ name: Build and Push Add-on
 
 on:
   push:
-    tags: 'v*' # Trigger on tags like v1.0.1
-    branches: [main] # Optional: Also build on main branch
+    tags: 'v*' # Trigger on tags like v0.1.0
+    #branches: [main] # Optional: Also build on main branch
     paths:
       - 'arqut-edge/**'
       - '.github/workflows/build.yaml'
 env:
-  VERSION: 1.0.1 # Init version
+  VERSION: 0.1.0 # Init version
 
 jobs:
   build:
