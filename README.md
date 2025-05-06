@@ -7,7 +7,7 @@
 
 The Arqut Edge add-on enables you to expose your internal web services securely through tunnel connections.
 
-![The Arqut Edge Application add-on](images/screenshot.png)
+![The Arqut Edge Application add-on](https://github.com/tphan267/tunnel-addon/blob/main/images/screenshot.png)
 
 ## About
 
@@ -26,6 +26,6 @@ Thank you for being involved! :heart_eyes:
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
-[docs]: https://github.com/tphan267/tunnel-addon/blob/main/DOCS.md
+[docs]: https://github.com/tphan267/tunnel-addon/blob/main/arqut-edge/DOCS.md
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 [issue]: https://github.com/tphan267/tunnel-addon/issues
