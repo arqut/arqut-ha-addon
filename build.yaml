@@ -2,9 +2,9 @@ build_from:
   aarch64: 'ghcr.io/home-assistant/aarch64-base-debian:bullseye'
   amd64: 'ghcr.io/home-assistant/amd64-base-debian:bullseye'
 labels:
-  org.opencontainers.image.title: 'Arqut Edge'
+  org.opencontainers.image.title: 'Arqut Tunnel'
   org.opencontainers.image.description: 'Arqut Tunnel Service'
-  org.opencontainers.image.source: 'https://github.com/tphan267/tunnel-ha-addon'
+  org.opencontainers.image.source: 'https://github.com/tphan267/tunnel-addon'
   org.opencontainers.image.licenses: 'Apache License 2.0'
 args:
   TEMPIO_VERSION: '2021.09.0'

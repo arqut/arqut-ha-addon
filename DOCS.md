@@ -27,5 +27,5 @@ Got questions?
 Please [open an issue here][issue] GitHub.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
-[addon]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Ftphan267%2Ftunnel-ha-addon
-[issue]: https://github.com/tphan267/tunnel-ha-addon/issues
+[addon]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Ftphan267%2Ftunnel-addon
+[issue]: https://github.com/tphan267/tunnel-addon/issues

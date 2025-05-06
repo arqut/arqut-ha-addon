@@ -5,7 +5,8 @@ on:
     tags: 'v*' # Trigger on tags like v0.1.0
     # branches: [main] # Optional: Also build on main branch
     paths:
-      - 'arqut-edge/**'
+      # - 'arqut-edge/**'
+      - './**'
       - '.github/workflows/build.yaml'
 # env:
 #   VERSION: 0.1.0 # Init version

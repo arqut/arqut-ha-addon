@@ -26,6 +26,6 @@ Thank you for being involved! :heart_eyes:
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
-[docs]: https://github.com/tphan267/tunnel-ha-addon/blob/main/DOCS.md
+[docs]: https://github.com/tphan267/tunnel-addon/blob/main/DOCS.md
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[issue]: https://github.com/tphan267/tunnel-ha-addon/issues
+[issue]: https://github.com/tphan267/tunnel-addon/issues
