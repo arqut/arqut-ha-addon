@@ -1,6 +1,6 @@
 name: Arqut Tunnel Service
 description: Arqut Tunnel Service for Home Assistant
-version: 0.1.4
+version: 0.1.5
 slug: arqut-tunnel
 init: false
 url: https://github.com/tphan267/tunnel-addon
