@@ -6,7 +6,7 @@ init: false
 url: https://github.com/tphan267/tunnel-addon
 codenotary: tuan.phan267@gmail.com
 webui: http://[HOST]:[PORT:3030]
-image: ghcr.io/tphan267/arqut-edge-{arch}:0.1.3
+image: ghcr.io/tphan267/arqut-edge-{arch}
 arch:
   - aarch64
   - amd64
