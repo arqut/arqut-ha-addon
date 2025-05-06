@@ -13,4 +13,4 @@ bashio::log.info "Starting Aequt Edge with data_dir=$DATA_DIR ..."
 
 ls $DATA_DIR -la
 
-SME_DATA_DIR="$DATA_DIR" /arqut-edge --docker
+SME_DATA_DIR="$DATA_DIR" /arqut-edge --haaddon
