@@ -1,6 +1,6 @@
 name: Arqut Tunnel Service
 description: Arqut Tunnel Service for Home Assistant
-version: 0.1.5
+version: 0.1.6
 slug: arqut-tunnel
 init: false
 url: https://github.com/tphan267/tunnel-addon
@@ -23,5 +23,7 @@ ports_description:
   3030/tcp: Used for web interface and API
 options:
   data_dir: /data
+  log_level: info
 schema:
   data_dir: str
+  log_level: list(error|warn|info|debug)
