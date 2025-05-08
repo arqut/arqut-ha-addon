@@ -3,13 +3,11 @@ name: Build and Push Add-on
 on:
   workflow_dispatch:
   push:
-    tags: 'v*' # Trigger on tags like v0.1.0
-    # branches: [main] # Optional: Also build on main branch
+    tags: 
+     - 'v*' # Trigger on tags like v0.1.0
     paths:
       - 'arqut-edge/**'
       - '.github/workflows/build.yaml'
-# env:
-#   VERSION: 0.1.0 # Init version
 
 jobs:
   build:
@@ -22,10 +20,16 @@ jobs:
     strategy:
       matrix:
         include:
-          - arch: aarch64
-            build_from: ghcr.io/home-assistant/aarch64-base-debian:bullseye
+          - arch: i386
+            build_from: ghcr.io/home-assistant/i386-base-debian:bullseye
           - arch: amd64
             build_from: ghcr.io/home-assistant/amd64-base-debian:bullseye
+          - arch: armv6
+            build_from: ghcr.io/home-assistant/armv7-base-debian:bullseye
+          - arch: armv7
+            build_from: ghcr.io/home-assistant/armv7-base-debian:bullseye
+          - arch: aarch64
+            build_from: ghcr.io/home-assistant/aarch64-base-debian:bullseye
 
     steps:
       - uses: actions/checkout@v3
