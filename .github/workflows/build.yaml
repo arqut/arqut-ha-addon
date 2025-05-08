@@ -1,6 +1,7 @@
 name: Build and Push Add-on
 
 on:
+  workflow_dispatch:
   push:
     tags: 'v*' # Trigger on tags like v0.1.0
     # branches: [main] # Optional: Also build on main branch
