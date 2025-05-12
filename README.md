@@ -26,8 +26,8 @@ Thank you for being involved! :heart_eyes:
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-red.svg
-[armv6-shield]: https://img.shields.io/badge/armv6-yes-red.svg
-[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+[armv6-shield]: https://img.shields.io/badge/armv6-yes-green.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [docs]: https://github.com/arqut/arqut-ha-addon/blob/main/arqut-edge/DOCS.md
 [issue]: https://github.com/arqut/arqut-ha-addon/issues
