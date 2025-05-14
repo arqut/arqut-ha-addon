@@ -1,6 +1,6 @@
 # Home Assistant Add-on: Arqut Edge Application
 
-This add-on provides a simple and secure tunnel service, allowing you to publish internal network services and access them remotely over the internet. With one-click installation and seamless integration into Home Assistant, you can easily make your local services or IoT devices accessible from anywhere — no public IP required.
+This add-on provides a simple and secure tunnel service, allowing you to publish internal network services and access them remotely over the Internet. With a one-click installation and a seamless integration into Home Assistant, you can easily make your local services or IoT devices accessible from anywhere — no public IP or domain required.
 
 ## Installation
 
