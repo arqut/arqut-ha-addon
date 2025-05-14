@@ -1,12 +1,12 @@
 name: Arqut Tunnel Service
 description: Arqut Tunnel Service for Home Assistant
-version: 0.1.6
+version: 0.3.0
 slug: arqut-tunnel
 init: false
-url: https://github.com/tphan267/tunnel-addon
+url: https://github.com/arqut/arqu-ha-addon
 codenotary: tuan.phan267@gmail.com
 webui: http://[HOST]:[PORT:3030]
-image: ghcr.io/tphan267/arqut-edge-{arch}
+image: ghcr.io/arqut/arqut-edge-{arch}
 arch:
   - aarch64
   - amd64
