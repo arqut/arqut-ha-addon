@@ -6,7 +6,7 @@ init: false
 url: https://github.com/arqut/arqut-ha-addon
 codenotary: tuan.phan267@gmail.com
 ingres: true
-ingress_port: 3030,
+ingress_port: 3030
 image: ghcr.io/arqut/arqut-edge-{arch}
 arch:
   - aarch64
