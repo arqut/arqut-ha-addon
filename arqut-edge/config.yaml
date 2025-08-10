@@ -6,6 +6,7 @@ init: false
 url: https://github.com/arqut/arqut-ha-addon
 codenotary: tuan.phan267@gmail.com
 ingres: true
+ingress_port: 3030,
 image: ghcr.io/arqut/arqut-edge-{arch}
 arch:
   - aarch64
@@ -22,6 +23,7 @@ privileged:
   - NET_ADMIN
 ports:
   3030/tcp: 3030
+  3031/tcp: 3031
 ports_description:
   3030/tcp: Used for web interface and API
 options:
