@@ -5,7 +5,7 @@ slug: arqut-tunnel
 init: false
 url: https://github.com/arqut/arqut-ha-addon
 codenotary: tuan.phan267@gmail.com
-webui: http://[HOST]:[PORT:3030]
+ingres: true
 image: ghcr.io/arqut/arqut-edge-{arch}
 arch:
   - aarch64
