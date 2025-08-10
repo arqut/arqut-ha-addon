@@ -23,7 +23,6 @@ privileged:
   - NET_ADMIN
 ports:
   3030/tcp: 3030
-  3031/tcp: 3031
 ports_description:
   3030/tcp: Used for web interface and API
 options:
