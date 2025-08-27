@@ -22,7 +22,7 @@ Got questions?
 
 Please [open an issue here][issue] GitHub.
 
-Thank you for being involved! :heart_eyes:
+Thank you for being involved!
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
