@@ -1,0 +1,128 @@
+name: Build Arqut Edge EE Add-on
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        type: string
+
+jobs:
+  call-build-binaries:
+    uses: ./.github/workflows/build-arqut-edge-ee-binaries.yaml
+    with:
+      version: ${{ github.event.inputs.version }}
+    secrets:
+      WORKFLOW_PAT: ${{ secrets.WORKFLOW_PAT }}
+
+  build-addon:
+    runs-on: ubuntu-latest
+    needs: call-build-binaries
+
+    permissions:
+      contents: write
+      packages: write
+
+    strategy:
+      matrix:
+        include:
+          - arch: i386
+            build_from: ghcr.io/home-assistant/i386-base-debian:bullseye
+          - arch: amd64
+            build_from: ghcr.io/home-assistant/amd64-base-debian:bullseye
+          - arch: armv6
+            build_from: ghcr.io/home-assistant/armv7-base-debian:bullseye
+          - arch: armv7
+            build_from: ghcr.io/home-assistant/armv7-base-debian:bullseye
+          - arch: aarch64
+            build_from: ghcr.io/home-assistant/aarch64-base-debian:bullseye
+
+    steps:
+      - name: Print version
+        run: echo "Version ${{ inputs.version }}"
+
+      - name: Checkout addon code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Update version and push changes
+        id: update_and_push
+        run: |
+          # Setup git
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          # Fetch latest changes first
+          git fetch origin
+          
+          # Reset to latest remote main (clean working directory)
+          git checkout main
+          git reset --hard origin/main
+          
+          FILE="arqut-edge-ee/config.yaml"
+          NEW_VERSION="${{ inputs.version }}"
+          
+          # Read current version
+          CURRENT_VERSION=$(yq eval '.version' "$FILE" 2>/dev/null || grep -E '^\s*version:' "$FILE" | head -1 | awk '{print $2}')
+          
+          echo "Current version: $CURRENT_VERSION"
+          echo "New version: $NEW_VERSION"
+          
+          if [ "$CURRENT_VERSION" != "$NEW_VERSION" ]; then
+            echo "Updating version to: $NEW_VERSION"
+            
+            # Update version in YAML (using yq if available, or sed)
+            if command -v yq &> /dev/null; then
+              yq eval ".version = \"$NEW_VERSION\"" -i "$FILE"
+            else
+              # Fallback to sed for simple YAML files
+              sed -i.bak "s/^\(\s*version:\s*\).*/\1\"$NEW_VERSION\"/" "$FILE"
+            fi
+            
+            # Add, commit and push
+            git add "$FILE"
+            git commit -m "[CI] Update arqut-edge-ee version to $NEW_VERSION"
+            git push origin main
+            
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Successfully updated and pushed version $NEW_VERSION"
+          else
+            echo "Version is already up to date."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Download binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: arqut-edge-ee-binaries
+          path: ./arqut-edge-ee/app-binaries
+
+      - name: List downloaded app binaries
+        run: ls -Rl arqut-edge-ee/app-binaries
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push HA Addon image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./arqut-edge-ee
+          platforms: linux/${{ matrix.arch }}
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/arqut-edge-ee-ha-addon-${{ matrix.arch }}:latest
+            ghcr.io/${{ github.repository_owner }}/arqut-edge-ee-ha-addon-${{ matrix.arch }}:${{ inputs.version }}
+          build-args: |
+            BUILD_FROM=${{ matrix.build_from }}
+            BINARY_PATH=./app-binaries/${{ matrix.arch }}/arqut-edge-ee
