@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          repository: "tphan267/arqut-edge-ee"
+          repository: "arqut/arqut-edge-ee"
           token: ${{ secrets.WORKFLOW_PAT }}
           ref: main
           fetch-depth: 0
