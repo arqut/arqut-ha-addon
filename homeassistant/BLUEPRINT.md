@@ -8,7 +8,7 @@ A collection of Home Assistant blueprints to integrate and enhance Arqut functio
 
 Create new Arqut events by sending MQTT messages when a sensor is triggered, with options for cooldown and time restrictions.
 
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint url](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/arqut/arqut-ha-addon/blob/main/blueprints/arqut-event-mqtt.yaml)
+[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint url](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/blueprints/arqut-event-mqtt.yaml)
 
 **Prerequisite:**
 - MQTT broker (Mosquitto from HA App Store)
@@ -25,7 +25,7 @@ Create new Arqut events by sending MQTT messages when a sensor is triggered, wit
 
 Create new Arqut events by calling `rest_command` when a sensor is triggered, with options for cooldown and time restrictions.
 
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint url](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/arqut/arqut-ha-addon/blob/main/blueprints/arqut-event-rest_command.yaml)
+[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint url](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/blueprints/arqut-event-rest_command.yaml)
 
 **Prerequisite:**
 - `rest_command.arqut_edge_create_event` must be configured
@@ -41,7 +41,7 @@ Create new Arqut events by calling `rest_command` when a sensor is triggered, wi
 
 Send notifications to multiple Arqut users when a sensor is triggered.
 
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint url](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/arqut/arqut-ha-addon/blob/main/blueprints/arqut-notification.yaml)
+[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint url](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/blueprints/arqut-notification.yaml)
 
 **Prerequisite:**
 - `rest_command.arqut_send_notification` must be configured
