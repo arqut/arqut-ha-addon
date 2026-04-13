@@ -19,12 +19,21 @@ comparison to installing any other Home Assistant add-on.
 1. After complete the first tunnel to your Arqut Edge application is created.
 1. Ready to go!
 
+## Resources
+
+| Guide | Description |
+|-------|-------------|
+| [**Blueprints**][blueprint] | Import ready-to-use automation blueprints for Arqut sensors and events |
+| [**REST Commands**][rest_command] | Configure REST commands to interact with Arqut API |
+
 ## Support
 
-Got questions?
+Got questions? Please [open an issue on GitHub][issue].
 
-Please [open an issue here][issue] GitHub.
+Thank you for using the Arqut Edge add-on!
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Farqut%2Farqut-ha-addon
+[blueprint]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/BLUEPRINT.md
+[rest_command]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/REST_COMMAND.md
 [issue]: https://github.com/arqut/arqut-ha-addon/issues
