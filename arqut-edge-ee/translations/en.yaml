@@ -1,0 +1,9 @@
+configuration:
+  data_dir:
+    name: "Data Directory"
+    description: "Path to data directory"
+  log_level:
+    name: "Log level"
+    description: "Controls the level of log details the add-on provides"
+network:
+  3030/tcp: Used for web interface and API
