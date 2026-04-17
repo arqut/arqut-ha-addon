@@ -2,6 +2,12 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.8.1] - 2026-04-16
+
+### Features
+- add MQTT client
+- create event from MQTT topic: arqut/events
+
 ## [0.7.1] - 2024-03-31
 
 ### Features
