@@ -2,6 +2,15 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.9.0] - 2026-05-27
+
+### Features
+- add camera streams and stream groups
+- add access log for tunnel/proxy service/camera stream
+
+### Changed
+- improve UI: filter, pagination
+
 ## [0.8.1] - 2026-04-16
 
 ### Features
