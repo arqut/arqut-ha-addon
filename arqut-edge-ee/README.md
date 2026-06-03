@@ -22,6 +22,7 @@ This add-on provides a simple and secure tunnel service, allowing you to publish
 |-------|-------------|
 | [**Blueprints**][blueprint] | Import ready-to-use automation blueprints for Arqut sensors and events |
 | [**REST Commands**][rest_command] | Configure REST commands to interact with Arqut API |
+| [**Sample Scripts**][sample_scripts] | Ready-to-use  scripts for common Arqut scenarios |
 
 ## Support
 
@@ -37,4 +38,5 @@ Thank you for using the Arqut Edge add-on!
 [docs]: https://github.com/arqut/arqut-ha-addon/blob/main/arqut-edge-ee/DOCS.md
 [blueprint]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/BLUEPRINT.md
 [rest_command]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/REST_COMMAND.md
+[sample_scripts]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/SAMPLE_SCRIPTS.md
 [issue]: https://github.com/arqut/arqut-ha-addon/issues

@@ -25,6 +25,7 @@ comparison to installing any other Home Assistant add-on.
 |-------|-------------|
 | [**Blueprints**][blueprint] | Import ready-to-use automation blueprints for Arqut sensors and events |
 | [**REST Commands**][rest_command] | Configure REST commands to interact with Arqut API |
+| [**Sample Scripts**][sample_scripts] | Ready-to-use  scripts for common Arqut scenarios |
 
 ## Support
 
@@ -36,4 +37,5 @@ Thank you for using the Arqut Edge add-on!
 [addon]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Farqut%2Farqut-ha-addon
 [blueprint]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/BLUEPRINT.md
 [rest_command]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/REST_COMMAND.md
+[sample_scripts]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/SAMPLE_SCRIPTS.md
 [issue]: https://github.com/arqut/arqut-ha-addon/issues

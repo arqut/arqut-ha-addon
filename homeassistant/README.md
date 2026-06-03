@@ -8,9 +8,11 @@ A complete integration suite for connecting Home Assistant with Arqut's notifica
 |-------|-------------|
 | [**Blueprints**][blueprint] | Import ready-to-use automation blueprints for Arqut sensors and events |
 | [**REST Commands**][rest_command] | Configure REST commands to interact with Arqut API |
+| [**Sample Scripts**][sample_scripts] | Ready-to-use  scripts for common Arqut scenarios |
 
 [blueprint]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/BLUEPRINT.md
 [rest_command]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/REST_COMMAND.md
+[sample_scripts]: https://github.com/arqut/arqut-ha-addon/blob/main/homeassistant/SAMPLE_SCRIPTS.md
 
 ---
 
@@ -20,9 +22,14 @@ A complete integration suite for connecting Home Assistant with Arqut's notifica
 - **Arqut Sensor Notification** - Send notifications to multiple Arqut users
 - **Create Arqut Event via MQTT** - Create events with cooldown and time restrictions
 
+### REST Commands
+- **`arqut_send_notification`** - Send push notifications to one or more Arqut app users
+- **`arqut_edge_create_event`** - Create an event log via the Arqut Edge service
+
 ### Scripts
-- Sample automation scripts for common scenarios
-- Integration examples with sensors and triggers
+- **Create Arqut Edge Event Log via MQTT** - Publish event logs directly to the MQTT broker
+- **Create Arqut Edge Event Log via REST Command** - Create event logs using the REST command integration
+- **Send Notification to Arqut App** - Send push notifications to one or more Arqut users
 
 ---
 
