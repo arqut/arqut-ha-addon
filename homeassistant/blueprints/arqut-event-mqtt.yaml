@@ -38,8 +38,8 @@ blueprint:
           "description": "Event description",
           "event_type": "event",
           "data": {
-            "image": "http://fpt.traffboost.net:2082/local/snapshots/gate_opened_yard_cam.jpg",
-            "image_link": "http://fpt.traffboost.net:2082/local/snapshots/_index.html"
+            "key_1": "value_1",
+            "key_2": "value_2"
           }
       }
       selector:
