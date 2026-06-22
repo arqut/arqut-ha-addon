@@ -2,6 +2,17 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.11.0] - 2026-06-22
+
+### Features
+- discover local IP cameras (ONVIF / RTSP / HTTP probes)
+- send event notifications via the cloud's edge-dedicated endpoint (server resolves recipients)
+
+## [0.10.0] - 2026-06-04
+
+### Features
+- test MQTT broker connection from settings
+
 ## [0.9.0] - 2026-05-27
 
 ### Features
