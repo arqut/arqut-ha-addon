@@ -2,6 +2,12 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.12.0] - 2026-07-03
+
+### Features
+- add option to require authentication for services
+- add retry logic for proxy service binding when TUN device is unavailable
+
 ## [0.11.0] - 2026-06-22
 
 ### Features
