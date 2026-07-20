@@ -2,6 +2,12 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.12.1] - 2026-07-20
+
+### Fixes
+- restart a running proxy service automatically when its local host, port, or enabled state is changed via the update API, instead of requiring a manual toggle
+- disable delete button on Edge UI service
+
 ## [0.12.0] - 2026-07-03
 
 ### Features
