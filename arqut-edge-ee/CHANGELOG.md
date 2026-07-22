@@ -2,6 +2,14 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.12.2] - 2026-07-22
+### Features
+- add a unified login page with QR code, short auth token, and password login options
+- exchange Cloud short auth tokens for local Edge sessions and automatically create the user when needed
+
+### Changed
+- align the login page with the Edge theme, including readable dark-mode text and transparent tab content
+
 ## [0.12.1] - 2026-07-20
 
 ### Fixes
