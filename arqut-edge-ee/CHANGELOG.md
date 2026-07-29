@@ -2,6 +2,10 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [0.12.3] - 2026-07-29
+### Features
+- add Cloud settings to enable the server to send notifications to the Arqut app when the Edge goes online or offline.
+
 ## [0.12.2] - 2026-07-22
 ### Features
 - add a unified login page with QR code, short auth token, and password login options
