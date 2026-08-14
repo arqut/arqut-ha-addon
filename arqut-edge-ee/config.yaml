@@ -18,6 +18,9 @@ map:
     path: /haconfig
 startup: services
 host_network: true
+# Lets the add-on register itself as a trusted proxy through Core's websocket
+# API, which is the only way to set that from Home Assistant 2026.8 on.
+homeassistant_api: true
 privileged:
   - NET_ADMIN
 ports:
