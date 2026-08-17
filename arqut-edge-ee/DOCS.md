@@ -19,6 +19,30 @@ comparison to installing any other Home Assistant add-on.
 1. After complete the first tunnel to your Arqut Edge application is created.
 1. Ready to go!
 
+## Trusted proxies
+
+Tunnelled requests reach Home Assistant through the add-on, so Home Assistant
+sees the add-on's address rather than the visitor's. It rejects those requests
+until it knows the add-on is a proxy it can trust, so the add-on registers
+itself on startup. There is nothing to configure.
+
+How that registration is applied depends on your Home Assistant version:
+
+| Version | Where it lands | What you will see |
+|---------|----------------|-------------------|
+| 2026.8 and later | **Settings > System > Network** | Home Assistant restarts once to apply it |
+| Up to 2026.7 | `configuration.yaml` | You need to restart Home Assistant yourself |
+
+On 2026.8 and later, Home Assistant treats a network change as a trial: it
+applies the change, restarts, and undoes it a few minutes later unless the
+change is confirmed. The add-on confirms its own change after the restart, so
+this resolves on its own — but it does mean the tunnel can take a couple of
+minutes to settle after the add-on first starts.
+
+If the tunnel is not working, open **Settings > System > Network** and check
+that **Trust X-Forwarded-For** is on and that your local subnets are listed
+under **Trusted proxies**. The add-on log records what it applied.
+
 ## Resources
 
 | Guide | Description |

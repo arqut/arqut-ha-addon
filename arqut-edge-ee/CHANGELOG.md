@@ -2,6 +2,10 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [Unreleased]
+### Changed
+- register the add-on as a trusted proxy through the Home Assistant API on 2026.8 and later, where the `http` integration is configured from **Settings > System > Network** instead of `configuration.yaml`. Earlier versions keep using `configuration.yaml`.
+
 ## [0.12.3] - 2026-07-29
 ### Features
 - add Cloud settings to enable the server to send notifications to the Arqut app when the Edge goes online or offline.
