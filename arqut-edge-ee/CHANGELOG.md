@@ -2,7 +2,7 @@
 
 All notable changes to this add-on will be documented in this file.
 
-## [Unreleased]
+## [0.13.0] - 2026-08-25
 ### Changed
 - register the add-on as a trusted proxy through the Home Assistant API on 2026.8 and later, where the `http` integration is configured from **Settings > System > Network** instead of `configuration.yaml`. Earlier versions keep using `configuration.yaml`.
 
