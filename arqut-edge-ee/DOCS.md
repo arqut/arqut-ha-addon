@@ -39,9 +39,27 @@ change is confirmed. The add-on confirms its own change after the restart, so
 this resolves on its own — but it does mean the tunnel can take a couple of
 minutes to settle after the add-on first starts.
 
-If the tunnel is not working, open **Settings > System > Network** and check
-that **Trust X-Forwarded-For** is on and that your local subnets are listed
-under **Trusted proxies**. The add-on log records what it applied.
+### "Confirm new HTTP server configuration"
+
+Home Assistant asks for that confirmation with a dialog of its own, so you may
+see one appear after the restart, counting down to a revert. You can dismiss
+it: the add-on confirms the change itself, usually within a minute.
+
+If you press **Confirm** on it anyway, Home Assistant may answer:
+
+> Failed to confirm the new configuration: No pending HTTP config to promote
+
+That means the add-on got there first and there was nothing left to confirm.
+The settings were kept, not lost — the dialog has no way to notice it was
+already answered, so its countdown keeps running and expires without doing
+anything. Dismiss it and reload the page.
+
+### If the tunnel is not working
+
+Open **Settings > System > Network** and check that **Trust X-Forwarded-For**
+is on and that your local subnets are listed under **Trusted proxies**. That
+page is the state Home Assistant is actually running with, whatever any dialog
+says. The add-on log records what it applied.
 
 ## Resources
 
