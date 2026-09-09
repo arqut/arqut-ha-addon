@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.13.1] - 2026-09-09
+### Fixes
+- surface an event notification that reached the site owner but none of its shared users; the cloud reported that as a clean success, so a fan-out failing for every share left no trace
+- read the notification response from either cloud version. Older deployments answer with a scalar, which the typed decode rejected outright, so against a cloud without the paired server change every event logged a failure for a notification that had in fact been delivered
+- report the version the binary was actually built as. The release version is injected at build time into `main.Version`, but the code read a `const` of the same name in lowercase — and `-ldflags -X` cannot write to a const, so every build since 0.7.1 reported 0.7.1
+
 ## [0.13.0] - 2026-08-25
 ### Features
 - enforce cloud-minted access conditions per request (P5)
