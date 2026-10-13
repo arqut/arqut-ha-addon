@@ -1,6 +1,27 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.14.0] - 2026-10-13
+### Security
+- limit the dashboard and the admin API to the edge owner and the admins the owner chooses. Before, anyone who could reach port 3030 could read the owner's cloud API key from `GET /api/config`, pair the edge to another account, unpair it, and use the admin API and the web terminal with any edge login
+- never send the cloud API key from `GET /api/config`, and send the edge API key only to the owner
+- an edge that is already paired can only be paired again by its owner
+- refuse dashboard requests that arrive through a WireGuard tunnel; the app still opens the dashboard as a service
+- stop logging sign-in tokens on the auth WebSocket, where a logged cloud access token could act as its user across the whole cloud account
+
+### Features
+- add an edge admin role. The Users page shows each user's access and lets the owner make a user an admin or remove that; the Users page, the terminal, unpairing, updates and the settings writes stay owner-only
+- look up the owner of the cloud key at startup, so an edge set up with `ARQUT_API_KEY` knows its owner
+
+### Fixes
+- read the edge JWT secret on each use, so the dashboard accepts sign-ins after an unpair and a new pairing without restarting the edge
+- write user rows one column at a time, so a sign-in can no longer write back an admin flag or setting the owner has just changed
+
+### Upgrade notes
+- everyone signs in again once: sessions from earlier versions are refused
+- offline passwords are cleared on upgrade, because earlier versions let any signed-in user set them. The owner sets them again from the Users page
+- users other than the owner lose dashboard access until the owner makes them an admin on the Users page
+
 ## [0.13.1] - 2026-09-09
 ### Fixes
 - surface an event notification that reached the site owner but none of its shared users; the cloud reported that as a clean success, so a fan-out failing for every share left no trace
